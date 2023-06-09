@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DCPF</title>
+  <link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <h1 class="logo"><span>DCPF | Automatic Planning Laboratory</span></h1>
+        <div class="NavbarTop">
+            <a href="/labs/automatedplanning/">[ Lab Main Page ]</a>
+            <a href="/labs/automatedplanning/researchjournal/">[ Research Journal ]</a>
+            <a href="https://trello.com/b/4QeO1lHq/kekwait">[ Planning ]</a>
+            <a href="https://brainy-morocco-b4e.notion.site/be417107acf2460285f0d50d30b1efcf">[ Wiki ]</a>
+            <a href="/labs/automatedplanning/additionalinfo">[ + ]</a>
+        </div>
+    </div>
+
+    <div class="Entry">
+        <h2>Automatic Planning Laboratory</h2>
+        <p>Мы занимаемся исследованиями автоматического планирования во всех его проявлениях: тайм-менеджмент, автономные роботы, AI ассистенты (автоматизированное делопроизводство) и т.д. Сейчас наша команда работает над задачей автоматизированного тайм-менеджмента.
+        </p>
+        <h2>Актуальная задача</h2>
+        <p>У пользователя есть несколько блоков свободного времени (к примеру, каждый день в неделю). Ему необходимо выполнить N задач, максимизируюя свою продуктивность (aka максимизировать оставшееся время). Наша задача: по графу зависимостей между задачами "OrderGraph", который задает отношение частичного порядка на множестве задач (к примеру, если лекция должна предшествовать решению листочка, то граф будет включать направленное ребро от лекции к листочку) и графу влияния на производительность “InfluenceGraph”, который содержит информацию о том, как время выполнения задачи зависит от ранее выполненных задач в цикле и блоке, построить оптимальное расписание. Также, нам необходимо построить “InfluenceGraph” основываясь на статистических данных пользователя и исправлять его основываясь на правильности наших предсказаний.
+        </p>
+        <h2>Нотация</h2>
+        <p>В графе OrderGraph, направленное ребро (a, b) обозначает, что "a" должо быть завершено до начала "b".
+
+            </p><p>В графе InfluenceGraph, направленное ребро (a, b, w_sameday, w_sameweek) обозначает следующую зависимость:</p><p>
+            1) Если "a" выполнено до "b" в одном блоке, тогда модификатор w_same (w_same > 0) приминяется к времени выполнения "b".<br>
+             
+            2) Если "a" выполнено до "b" в одном цикле, тогда модификатор w_sameweek (w_sameweek > 0) приминяется к времени выполнения "b".<br>
+            
+            P.S.: К примеру, блоки могут быть 3-часовыми периодами каждый день, а циклы - неделями.
+        </p>
+        <p>
+            Общая информация:<br>
+            Вот наш Telegram чат: <a href="https://t.me/joinchat/aUSmCZacjoZlMGYy" class="permitted">Telegram</a> <br>
+            Все, что связано с планированием (Trello) находится в [ Planning ] <br>
+            Если вы хотите добавить какую-то статью, кидайте ее в [ Wiki ] <b>из sci-hub ( sci-hub.mksa.top ) (aka пиратский архив статей) </b> <br>
+            1) Копируете doi статьи <br>
+            2) Вставляете в sci-hub <br>
+            3) Отправляете в [ Wiki ] ссылку и краткое описание того, что вы нагуглили
+            <a href="https://sci-hub.mksa.top/" class="permitted">sci-hub.mksa.top</a>
+        </p>
+    </div>
+</body>
+</html>

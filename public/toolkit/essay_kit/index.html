@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DCPF</title>
+  <link rel="stylesheet" href="/style.css">
+
+
+  <script>
+    function open_outlook() {
+      var strWindowFeatures = "location=yes,height=570,width=520,scrollbars=yes,status=yes";
+      var URL = "https://outlook.office365.com/mail/AAMkADQ1MTBkY2E4LTViNTEtNGEwOS05NDdmLTQzNWY1NGYwOTlmYQAuAAAAAADfNn5vFn4TRaq4aerhIbGwAQBMFKvvLCnpTL6pNPhrHkWNAAEU%2F6V0AAA%3D";
+      var win = window.open(URL, "_blank", strWindowFeatures);
+    }
+</script>
+</head>
+
+<body>
+    <div id="header">
+        <h1 class="logo"><span>Toolkit</span></h1>
+        <div class="NavbarTop">
+            <a href="/toolkit/essay_kit" class="permitted" target="_blank">[ Essay Writing Kit ]</a>
+            <a href="https://student.letovo.ru/" class="permitted" target="_blank">[ Open student.letovo.ru ]</a>
+            <a onclick="open_outlook();" class="permitted">[ Open 2FA Hub ]</a>
+        </div>
+    </div>
+
+    <div class="Entry">
+        <p>
+        1) Translate from Russian to English<br>
+        2) Change structure to more complex one<br>
+        3) Use it as an input for GPT-J<br>
+        4) Grammar Check (English)<br>
+        5) Expand synonyms ?<br>
+        6) Translate to Russian back<br>
+        7) Grammar check<br>
+        8) Anti-plagiarism check<br>
+        </p>
+
+        <div style="width:50%; padding-bottom:56.25%; position:relative; width: 550px; float: left;">
+            <iframe src="https://www.deepl.com/translator" style="position:absolute; top:0px; left:0px; 
+            width:100%; height:100%; border: none; overflow: hidden;"></iframe>
+        </div>
+        <div style="width:50%; padding-bottom:56.25%; position:relative; width: 550px; margin-left:20px; float: left;">
+            <iframe src="https://docs.google.com/document/u/0/create?usp=docs_home&ths=true" style="position:absolute; top:0px; left:0px; 
+            width:100%; height:100%; border: none; overflow: hidden;"></iframe>
+        </div>
+        <div style="width:50%; padding-bottom:56.25%; position:relative; width: 550px; margin-left:1130px;">
+            <iframe src="https://6b.eleuther.ai/" style="position:absolute; top:0px; left:0px; 
+            width:100%; height:100%; border: none; overflow: hidden;"></iframe>
+        </div>
+        </div>
+    </div>
+    <div class="Entry">
+        <div style="width:50%; padding-bottom:56.25%; position:relative; width: 550px; float: left;">
+            <iframe src="https://quillbot.com/grammar-check" style="position:absolute; top:0px; left:0px; 
+            width:100%; height:100%; border: none; overflow: hidden;"></iframe>
+        </div>
+        <div style="width:50%; padding-bottom:56.25%; position:relative; width: 550px; margin-left:20px; float: left;">
+            <iframe src="https://quillbot.com/" style="position:absolute; top:0px; left:0px; 
+            width:100%; height:100%; border: none; overflow: hidden;"></iframe>
+        </div>
+        <div style="width:50%; padding-bottom:56.25%; position:relative; width: 550px; margin-left:1130px;">
+            <iframe src="https://languagetool.org/" style="position:absolute; top:0px; left:0px; 
+            width:100%; height:100%; border: none; overflow: hidden;"></iframe>
+        </div>
+    </div>
+</body>
+</html>

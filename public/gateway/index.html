@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DCPF</title>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    function setCookie(name, value, options = {}) {
+        options = {
+        path: '/',
+        ...options
+        };
+
+        if (options.expires instanceof Date) {
+        options.expires = options.expires.toUTCString();
+        }
+
+        let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+        for (let optionKey in options) {
+        updatedCookie += "; " + optionKey;
+        let optionValue = options[optionKey];
+        if (optionValue !== true) {
+            updatedCookie += "=" + optionValue;
+        }
+        }
+
+        document.cookie = updatedCookie;
+    }
+
+    var labnames = {
+        "automatedplanning": "[ Automatic Planning Laboratory ]"
+    };
+
+    function checkPermittedLabs() {
+        let key = getCookie("labkey");
+        var output = document.getElementById('permitted');
+        if (key === undefined) {
+            output.innerHTML = "No key was entered, key expired, or cookies are disabled (turn them on, we do not track you)";
+            return;
+        }
+        let labname = key.split(':::')[0];
+        output.setAttribute('href', '/labs/' + labname);
+        output.innerHTML = labnames[labname];
+    }
+
+    function SpecifyKey(form) {
+        var spec_key = form.key.value;
+        setCookie('labkey', spec_key, {samesite: 'strict', 'max-age': 2147483647})
+        checkPermittedLabs();
+    }
+  </script>
+
+</head>
+
+<body>
+    <div id="header">
+        <h1 class="logo"><span>DCPF | Hub</span></h1>
+        <div class="NavbarTop">
+            <a href="/">[ Main ]</a>
+            <a href="/join">[ Join Lab ]</a>
+            <a href="/output">[ Output ]</a>
+            <a href="/blog">[ Blog ]</a>
+            <a href="/gateway">[ Gateway ]</a>
+        </div>
+    </div>
+
+    <div class="Entry">
+        <h2>Gateway</h2>
+        <p>This is a gateway to the internal networks of each lab. Please enter your personal key.</p>
+        <form id="key">
+            <p><input placeholder="Key" name="key"> 
+            <input type="button" name="button" Value="Check" onClick="SpecifyKey(this.form)">
+            </p>
+        </form>
+        <p></p>
+        <p>To get this key, sign up at the relevant lab. Since we understand you might just want a glimpse of what goes on in one of the labs, we suggest you view this information on our blog instead. Nevertheless, if you still feel curious about the research topics, we recommend making an application to the lab that interests you. </p>
+        <p>Upon entering your personal key, it would be saved in your browser cookies. Afterwards, it will be used to connect to the lab's encrypted internal network.</p>
+        <h3>Labs:</h3>
+        <a id="permitted" class="permitted"></a><br>
+        <p><input type="button" name="button-refresh" Value="Authenticate by cookies" onClick="checkPermittedLabs()"></p>
+    </div>
+</body>
+</html>

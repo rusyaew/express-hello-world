@@ -1,0 +1,63 @@
+body {
+    font-family: "Fira Code","Font Awesome", monospace;
+    color: #ddd;
+	background-color: #181818;
+	margin: 0;
+	padding: 0;
+    font-size: 14px;
+}
+
+
+
+.NavbarTop {
+    position: relative;
+	margin: auto;
+    overflow: hidden;
+    background-color: #333;
+	border-spacing: 26px;
+	outline: #ddd solid 2px;
+	-webkit-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
+	-moz-box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
+	box-shadow: 7px 7px 5px 1px rgba(0,0,0,0.6);
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.NavbarTop a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 4px 6px;
+    text-decoration: none;
+}
+
+.permitted {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 4px 6px;
+    text-decoration: none;  
+}
+
+.permitted:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.NavbarTop a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+h1.logo {
+    text-align: center;
+}
+
+.Entry {
+    position: relative;
+    margin: 3%;
+    background-color: #333;
+    outline: #ddd solid 2px;
+    padding: 6px;
+}

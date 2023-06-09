@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DCPF</title>
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+#hidden {
+  display: none;
+  height: 500px;
+  background: #181818;
+}
+:checked + #hidden {
+  display: block;
+}
+  </style>
+  <script>
+      function open_outlook() {
+        var strWindowFeatures = "location=yes,height=570,width=520,scrollbars=yes,status=yes";
+        var URL = "https://outlook.office365.com/mail/AAMkADQ1MTBkY2E4LTViNTEtNGEwOS05NDdmLTQzNWY1NGYwOTlmYQAuAAAAAADfNn5vFn4TRaq4aerhIbGwAQBMFKvvLCnpTL6pNPhrHkWNAAEU%2F6V0AAA%3D";
+        var win = window.open(URL, "_blank", strWindowFeatures);
+      }
+  </script>
+</head>
+
+<body>
+    <div id="header">
+        <h1 class="logo"><span>Toolkit</span></h1>
+        <div class="NavbarTop">
+            <a href="/toolkit/essay_kit" class="permitted" target="_blank">[ Essay Writing Kit ]</a>
+            <a href="https://student.letovo.ru/" class="permitted" target="_blank">[ Open student.letovo.ru ]</a>
+            <a onclick="open_outlook();" class="permitted">[ Open 2FA Hub ]</a>
+        </div>
+    </div>
+
+    <div class="Entry">
+        <h3>School</h3>
+        <a href="https://www.deepl.com/translator" class="permitted" target="_blank">[ Translate ]</a>
+        <a href="https://quillbot.com/" class="permitted" target="_blank">[ Paraphrase ]</a>
+        <a href="https://6b.eleuther.ai/" class="permitted" target="_blank">[ Make an essay GPT ]</a>
+        <a href="https://quillbot.com/summarize" class="permitted" target="_blank">[ Text summary ]</a>
+        <a href="https://docs.google.com/document/u/0/create?usp=docs_home&ths=true" class="permitted" target="_blank">[ Open empty Google Doc ]</a>
+        <h3>SAT x-Cur</h3>
+        <input type="checkbox" id="my_checkbox" style="display:none;">
+        <div id="hidden">
+            <pre>MB and VB will have classes at 18.45 (Wed) and 14.20 (Sat)
+                MA and VA will have classes at 19.50 (Wed) and 16.30 (Sat)
+                
+                
+                Class schedule for October
+                
+                Oct 2, Sat - Verbal
+                Oct 6, Wed - Verbal
+                
+                Oct 9, Sat - Math
+                Oct 13, Wed - Math
+                
+                Oct 16, Sat - Verbal
+                Oct 20, Wed - Verbal
+                
+                Oct 23, Sat - Math
+                Oct 27, Wed - Math
+                
+                Oct 30, Sat - Verbal
+                </pre>
+        </div>
+        <label for="my_checkbox">[ Show/hide ]</label>
+        <h4>History (Понедельник Monday)</h4>
+        <a href="/toolkit/essay_kit" class="permitted" target="_blank">[ Essay Writing Kit ]</a>
+        <a href="https://docs.google.com/document/u/0/create?usp=docs_home&ths=true" class="permitted" target="_blank">[ Open empty Google Doc ]</a>
+        <a href="https://canvas.letovo.ru/courses/2549/assignments" class="permitted" target="_blank">[ Tasks ]</a>
+        <a href="https://canvas.letovo.ru/courses/2549/modules" class="permitted" target="_blank">[ Modules ]</a>
+        <h4>Writing Center (Четверг Thursday)</h4>
+        <a href="/toolkit/essay_kit" class="permitted" target="_blank">[ Essay Writing Kit ]</a>
+        <a href="https://docs.google.com/document/u/0/create?usp=docs_home&ths=true" class="permitted" target="_blank">[ Open empty Google Doc ]</a>
+        <a href="hhttps://canvas.letovo.ru/courses/2523/assignments" class="permitted" target="_blank">[ Tasks ]</a>
+        <a href="https://canvas.letovo.ru/courses/2523/modules" class="permitted" target="_blank">[ Modules ]</a> 
+        <h3>Problem Solving</h3>
+        <h4>Mathematics</h4>
+        <a href="https://canvas.letovo.ru/courses/2570" class="permitted" target="_blank">[ Advanced Algebra ]</a> 
+        <a href="https://canvas.letovo.ru/courses/2598" class="permitted" target="_blank">[ Competitive Math ]</a> 
+        <a href="https://canvas.letovo.ru/courses/2186" class="permitted" target="_blank">[ HL Math Course ]</a> 
+        <a href="https://canvas.letovo.ru/courses/2440/modules/17462" class="permitted" target="_blank">[ Перечневые ]</a> 
+        <h4>Informatics</h4>
+        <a href="http://informatics.letovo.ru/d/index_4.htm" class="permitted" target="_blank">[ Competitive Informatics ]</a> 
+        <a href="https://algocode.ru/bp2021/" class="permitted" target="_blank">[ Tinkoff B' ]</a> 
+    </div>
+</body>
+</html>
